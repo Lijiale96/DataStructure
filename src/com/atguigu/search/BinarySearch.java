@@ -82,7 +82,6 @@ public class BinarySearch {
                 temp -= 1;//temp左移
             }
           resIndexlist.add(mid);
-
             //向mid索引值得右边扫描，将所有满足1000，的元素的下标，加入到集合ArrayList
              temp = mid+1;
             while(true) {
@@ -91,7 +90,7 @@ public class BinarySearch {
                 }
                 //否则，就temp放入到resIndexlist
                 resIndexlist.add(temp);
-                temp += 1;//temp左移
+                temp += 1;//temp右移
             }
            return resIndexlist;
         }

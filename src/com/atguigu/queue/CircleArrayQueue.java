@@ -63,8 +63,6 @@ public class CircleArrayQueue {
         private int rear;//队列尾
         private int[] arr; //该数据用于存放数据，模拟队列
 
-
-
         public  CircleArray(int arrMaxSize){
             maxSize = arrMaxSize;
             arr = new int[maxSize];
