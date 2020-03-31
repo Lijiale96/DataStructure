@@ -7,23 +7,24 @@ import java.util.Date;
 public class HeapSort {
     public static void main(String[] args) {
         //要求将数组进行升序排序
-//        int arr[] = {4, 6, 8, 5, 9,-1,90,89,-99,232};
-        int[] arr =new int[80000];
-        for (int i=0;i<80000;i++){
-            arr[i] =(int)(Math.random()*8000000);//生成一个【0,8000000）数
-        }
-        System.out.println("排序前");
-        Date data1 =new Date();
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        String data1Str = simpleDateFormat.format(data1);
-        System.out.println("排序前的时间是="+data1Str);
+        int arr[] = {4, 6, 8};
+//       int arr[] = {4, 6, 8, 5, 9,-1,90,89,-99,232};
+//        int[] arr =new int[80000];
+//        for (int i=0;i<80000;i++){
+//            arr[i] =(int)(Math.random()*8000000);//生成一个【0,8000000）数
+//        }
+//        System.out.println("排序前");
+//        Date data1 =new Date();
+//        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//        String data1Str = simpleDateFormat.format(data1);
+//        System.out.println("排序前的时间是="+data1Str);
 
         heapSort(arr);
 
-        Date data2 = new Date();
-        //     SimpleDateFormat simpleDateFormat1=new SimpleDateFormat("yyyy-MM-dd HH:");
-        String data2Str = simpleDateFormat.format(data2);
-        System.out.println("排序后的时间是="+data2Str);
+//        Date data2 = new Date();
+//        //     SimpleDateFormat simpleDateFormat1=new SimpleDateFormat("yyyy-MM-dd HH:");
+//        String data2Str = simpleDateFormat.format(data2);
+//        System.out.println("排序后的时间是="+data2Str);
 
     }
 

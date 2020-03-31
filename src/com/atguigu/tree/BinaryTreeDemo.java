@@ -58,8 +58,8 @@ public class BinaryTreeDemo {
         //删除结点
         System.out.println("删除前，前序遍历");
         binaryTree.preOrder();  //12354
-        binaryTree.delNode(5);
-//      binaryTree.delNode(3);
+//        binaryTree.delNode(5);
+       binaryTree.delNode(3);
         System.out.println("删除后，前序遍历");
         binaryTree.preOrder(); //1234
     }
@@ -205,12 +205,38 @@ class HeroNode{
          * 5、如果第4步也没有删除节点，则应该向右子树进行删除
          */
         //2、如果当前节点左子节点不为空，并且左子节点就是要删除节点，就将this.left=null,并且就返回（结束递归删除）
+        //非叶子节点A只有一个B，B替代A
+        //非叶子节点A有B和c，让左子节点替代A
         if (this.left !=null && this.left.no==no){
+            if (this.left.left !=null&& this.left.right !=null){
+                this.left =this.left.left;
+                return;
+            }
+            else if(this.left.left !=null ){
+                this.left = this.left.left;
+                return;
+            }else if ( this.left.right !=null){
+                this.left =  this.left.right;
+                return;
+            }
             this.left=null;
             return;
         }
         //3、如果当前节点右子节点不为空，并且右子节点就是要删除节点，就将this.right=null,并且就返回（结束递归删除）
+        //非叶子节点A只有一个B，B替代A
+        //非叶子节点A有B和c，让左子节点替代A
         if (this.right !=null && this.right.no==no){
+            if (this.right.left !=null&& this.right.right !=null){
+                this.right =this.right.left;
+                return;
+            }
+            if(this.right.left !=null ){
+                this.right= this.right.left;
+                return;
+            }else if ( this.right.right !=null){
+                this.right=  this.right.right;
+                return;
+            }
             this.right=null;
             return;
         }

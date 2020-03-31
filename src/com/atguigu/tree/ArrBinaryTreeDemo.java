@@ -17,21 +17,20 @@ public class ArrBinaryTreeDemo {
 }
 
 class ArrBinaryTree{
-       private int[] arr;//存储数据节点的数据
+        private int[] arr;//存储数据节点的数据
         public ArrBinaryTree(int[] arr){
             this.arr=arr;
         }
-
         //重载preOrder
-    public void preOrder(){
+        public void preOrder(){
             this.preOrder(0);
     }
-    //重载preOrder
-    public void infixOrder(){
+        //重载preOrder
+         public void infixOrder(){
         this.infixOrder(0);
     }
-    //重载preOrder
-    public void postOrder(){
+        //重载preOrder
+        public void postOrder(){
         this.postOrder(0);
     }
         //编写一个方法，完成顺序存储二叉树的前序遍历
