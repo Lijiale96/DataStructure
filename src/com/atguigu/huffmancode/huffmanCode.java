@@ -225,8 +225,6 @@ public class huffmanCode {
         }
     }
 
-
-
     //使用一个方法，将前面的方法封装起来，便于我们调用
     /**
      *
@@ -352,10 +350,8 @@ public class huffmanCode {
      * @return  返回的就是 List 形式 [Node[data97,weight=5],Node[data =32,weight=9]]...
      */
     private static List<Node>  getNodes(byte[] bytes){
-
         //1、创建一个ArrayList
         ArrayList<Node>  nodes = new ArrayList<Node>();
-
         //遍历 bytes，统计 每一个byte 出现的次数 -》map[key,value]
         Map<Byte,Integer> counts = new HashMap<>();
         for (byte b : bytes){
@@ -366,7 +362,6 @@ public class huffmanCode {
                 counts.put(b,count+1);
             }
         }
-
         //把每个键值对转成一个Node对象，并加入到nodes集合
         //遍历map
         for (Map.Entry<Byte,Integer> entry :counts.entrySet()){
